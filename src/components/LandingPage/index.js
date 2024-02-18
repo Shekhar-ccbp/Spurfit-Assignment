@@ -17,7 +17,7 @@ const LandingPage = () => (
         alt="ripple-img"
       />
       <img
-        src=" https://res.cloudinary.com/dzt6qmhmq/image/upload/v1708168405/Flower_x1hzwj.svg"
+        src="https://res.cloudinary.com/dzt6qmhmq/image/upload/v1708168265/Ripple_oww84b.svg"
         className="absolute top-36 left-1/2 h-12"
         alt="flower-img"
       />
