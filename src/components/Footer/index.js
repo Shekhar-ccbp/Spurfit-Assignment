@@ -12,7 +12,7 @@ const Footer = () => (
     </div>
     <div className="flex gap-14">
       <div className="flex items-center gap-2">
-        <div className="p-2 rounded-full">
+        <div className="p-2 rounded-full bg-skyBlue">
           <svg
             width="22"
             height="22"
@@ -42,7 +42,7 @@ const Footer = () => (
       </div>
       <a href="mailto:hi@ahead-app.com">
         <div className="flex items-center gap-2 cursor-pointer">
-          <div className="p-2 rounded-full">
+          <div className="p-2 rounded-full bg-skyBlue">
             <svg
               width="22"
               height="22"
