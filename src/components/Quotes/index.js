@@ -1,3 +1,5 @@
+import {motion} from 'framer-motion'
+
 const quotes = [
   {
     emoji: '😔',
@@ -46,16 +48,36 @@ const quotes = [
 const Quotes = () => (
   <div className=" py-12">
     <div className="relative w-fit">
-      <p className="text-6xl font-semibold px-16 pb-16">
+      <motion.p
+        variants={{
+          onScreen: {opacity: 1, scale: 1, transformOrigin: 'left'},
+          offScreen: {opacity: 0, scale: 0},
+        }}
+        initial="offScreen"
+        whileInView="onScreen"
+        viewport={{once: true}}
+        transition={{duration: 1.25, type: 'spring'}}
+        className="text-6xl font-semibold px-16 pb-16"
+      >
         Does this sound familiar...
-      </p>
+      </motion.p>
       <img
         src="https://res.cloudinary.com/dzt6qmhmq/image/upload/v1708256504/redGhost_xouq2m.svg"
         alt="angry-icon"
-        className="absolute top-0 h-16"
+        className="absolute top-0 -right-4 -rotate-6 h-16"
       />
     </div>
-    <div className="relative flex items-center overflow-auto px-16 gap-12 py-12">
+    <motion.div
+      variants={{
+        onScreen: {opacity: 1, scale: 1, transformOrigin: 'right'},
+        offScreen: {opacity: 0, scale: 0},
+      }}
+      initial="offScreen"
+      whileInView="onScreen"
+      viewport={{once: true}}
+      transition={{duration: 0.75, type: 'spring'}}
+      className="relative flex items-center overflow-auto px-16 gap-12 py-12"
+    >
       {quotes.map(quote => (
         <div
           className={
@@ -67,7 +89,7 @@ const Quotes = () => (
           <p className="opacity-80">{quote.description}</p>
         </div>
       ))}
-    </div>
+    </motion.div>
   </div>
 )
 
